@@ -4,7 +4,7 @@
 // Array example: bankAccounts in /data/data.js
 // getClientWithGreatestBalance(bankAccounts) => [{ name: 'SomeName', balance: 32, ... }]
 
-import { n } from "vitest/dist/index-761e769b.js";
+
 
 export function getClientWithGreatestBalance(array) {
   // Your code goes here...

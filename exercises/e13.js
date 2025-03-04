@@ -8,17 +8,22 @@
 // Candy's Account Object,
 // Phil's Account Object
 // ]
-
 export function getAllAccountsWithSumsOfDepositsLess2000(array) {
   let deposits = [];
   for (let i = 0; i < array.length; i++) {
-    let sum = array[i].deposits ? array[i].deposits.reduce((acc, num) => acc + num, 0) : 0;
+    let sum = 0;
+    if (Array.isArray(array[i].deposits)) {  
+      for (let j = 0; j < array[i].deposits.length; j++) {
+        sum += array[i].deposits[j];  
+      }
+    }
     if (sum < 2000) {  
-      deposits.push(array[i]); 
+      deposits.push(array[i]);
     }
   }
   return deposits;
 }
+
 
   
 
